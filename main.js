@@ -6,7 +6,7 @@ var mainState = {
 },
 
 create: function() { 
-    this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
+    
 	this.pipes = game.add.group(); 
 	
     // Change the background color of the game to blue
@@ -29,9 +29,10 @@ create: function() {
     var spaceKey = game.input.keyboard.addKey(
                     Phaser.Keyboard.SPACEBAR);
     spaceKey.onDown.add(this.jump, this);     
-	
+	this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
 	
 },
+
 update: function() {
     // If the bird is out of the screen (too high or too low)
     // Call the 'restartGame' function

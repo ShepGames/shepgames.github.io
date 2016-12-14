@@ -23,7 +23,7 @@ create: function() {
     this.bird.body.gravity.y = 1000;  
 
     // Call the 'jump' function when the spacekey is hit
-    var spaceKey = game.input.MOUSE_TOUCH_COMBINE.addKey(
+    var spaceKey = game.input.mouse.addKey(
                     Phaser.mouse.LEFTCLICK);
     spaceKey.onDown.add(this.jump, this);     
 	this.pipes = game.add.group(); 

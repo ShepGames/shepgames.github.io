@@ -6,8 +6,9 @@ var mainState = {
 },
 
 create: function() { 
+    this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
 	this.pipes = game.add.group(); 
-	this.timer = game.time.events.loop(1500, this.addRowOfPipes, this); 
+	
     // Change the background color of the game to blue
     game.stage.backgroundColor = '#71c5cf';
 

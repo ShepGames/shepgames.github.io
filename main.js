@@ -23,7 +23,7 @@ create: function() {
 
     // Call the 'jump' function when the spacekey is hit
     var spaceKey = game.input.keyboard.addKey(
-                    Phaser.Keyboard.SPACEBAR);
+                    Phaser.Keyboard.LEFTCLICK);
     spaceKey.onDown.add(this.jump, this);     
 },
 

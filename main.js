@@ -2,6 +2,7 @@ var mainState = {
     preload: function() { 
     // Load the bird sprite
     game.load.image('bird', 'assets/bird.png'); 
+	game.load.image('pipe', 'assets/pipe.png');
 },
 
 create: function() { 
@@ -22,9 +23,10 @@ create: function() {
     this.bird.body.gravity.y = 1000;  
 
     // Call the 'jump' function when the spacekey is hit
-    var spaceKey = game.input.keyboard.addKey(
-                    Phaser.Keyboard.LEFTCLICK);
+    var spaceKey = game.input.MOUSE_TOUCH_COMBINE.addKey(
+                    Phaser.mouse.LEFTCLICK);
     spaceKey.onDown.add(this.jump, this);     
+	this.pipes = game.add.group(); 
 },
 
 update: function() {

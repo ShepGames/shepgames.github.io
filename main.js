@@ -1,12 +1,10 @@
-var mainState = {
+vvar mainState = {
     preload: function() { 
     // Load the bird sprite
     game.load.image('bird', 'assets/bird.png'); 
-	
 },
 
 create: function() { 
-
     // Change the background color of the game to blue
     game.stage.backgroundColor = '#71c5cf';
 
@@ -27,7 +25,6 @@ create: function() {
     var spaceKey = game.input.keyboard.addKey(
                     Phaser.Keyboard.SPACEBAR);
     spaceKey.onDown.add(this.jump, this);     
-		
 },
 
 update: function() {
@@ -47,7 +44,6 @@ restartGame: function() {
     // Start the 'main' state, which restarts the game
     game.state.start('main');
 },
-
 };
 
 // Initialize Phaser, and create a 400px by 490px game

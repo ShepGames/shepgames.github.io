@@ -42,7 +42,7 @@ li a:hover:not(.active) {
 	font-family: Times New Roman;	
 }
 .handwriting {
-	font-family: Bradley Hand, cursive;
+	font-family: "Comic Sans MS", cursive, sans-serif
 }
 .active {
     background-color: #041ca3;

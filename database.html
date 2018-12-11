@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Computer Science A-level</h1>
+		<p> </p>
+	<h3 class="niceText">Databases</h3>
+		
+		<p class="handwriting">A database is a persistant tabular form to store data. Data is split into tables, fields (columns) and records (rows).  </p>
+		<p class="handwriting">Databases are typically maintained using SQL. Databases use primary keys to find infomation, which are unique  </p>
+		<p class="handwriting">identifiers in the code like "keycode".  </p>
+		<font color="red"><h4 class="handwriting">Keys </h4></font>
+		<p class="handwriting">Secondary - A key which can represent a record, but is not the primary. It may not be unique so will group multiple records. </p>
+		<p class="handwriting">Foreign - secondary keys which are used in other databases to link them  </p>
+		<p class="handwriting">.</p>
+		<font color="red"><h4 class="handwriting">SQL</h4></font>
+		<p class="handwriting">SQL is the language you are expected to use for databases. An '*' represents a whole table</p>
+		<p class="handwriting">SELECT ... - means to select all the fiels listed. You can do all (*) or list with commas </p>
+		<p class="handwriting">FROM ... - means selecting the ... table</p>
+		<p class="handwriting">.</p>
+		<font color="blue"><p class="handwriting">SELECT * FROM Employees </p></font>
+		<p class="handwriting">The above will select all fields from the table Employee </p>
+		<p class="handwriting">WHERE ... - is the search criteria. Set it out like an IF statement</p>
+		<p class="handwriting">.</p>
+		<font color="blue"><p class="handwriting">SELECT EmployeeID FROM Employees</p></font>
+		<font color="blue"><p class="handwriting">WHERE age = 54</p></font>
+		<p class="handwriting">The above will output all the IDs of 54 year olds.</p>
+		<p class="handwriting">ORDER BY ... - orders the output</p>
+		<p class="handwriting">.</p>
+		<font color="blue"><p class="handwriting">SELECT EmployeeID FROM Employees</p></font>
+		<font color="blue"><p class="handwriting">ORDER BY wage</p></font>
+		<font color="blue"><p class="handwriting">WHERE age = 54</p></font>
+		<p class="handwriting">The above will order the output of ID's of 54 year olds by their wage.</p>
+		<p class="handwriting">UPDATE ... - update the tablename</p>
+		<p class="handwriting">.</p>
+		<font color="blue"><p class="handwriting">UPDATE animals</p></font>
+		<font color="blue"><p class="handwriting">SET fleas = FALSE</p></font>
+		<font color="blue"><p class="handwriting">WHERE treatment = TRUE</p></font>
+		<p class="handwriting">The above finds all the animals who have had treatment, and update their flea status to false in the animal table.</p>
+		<p class="handwriting">DELETE ... - delete from the tablename</p>
+		<p class="handwriting">.</p>
+		<font color="blue"><p class="handwriting">DELETE animals</p></font>
+		<font color="blue"><p class="handwriting">WHERE died = TRUE</p></font>
+		<p class="handwriting">The above deletes all the records where the animal died.</p>
+	</div>
+</body>
+</html>

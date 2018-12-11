@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="#computing">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Computer Science A level</h1>
+		<p> </p>
+	<h3 class="niceText">SUVAT</h3>
+		<p class="handwriting">Suvat is an easy way to remember the components of movement.</p>
+		<p class="handwriting"> S = displacement, which is the distance travelled</p>
+		<p class="handwriting"> U = the initial velocity, which is the speed the object is going at from when it starts</p>
+		<p class="handwriting"> V = the final velocity, which is the speed of the object at the end</p>
+	<h3 class="niceText">Projectiles</h3>
+		<p class="handwriting"><a href="#">Search and sort algorithms</a></p>
+		<p class="handwriting"><a href="#">Data structures</a></p>
+		<p class="handwriting"><a href="#">Moments</a></p>
+		<p class="handwriting"><a href="#">Rates of change</a></p>
+		<p class="handwriting"><a href="#">Normal ddistribution</a></p>
+	</div>
+</body>
+</html>

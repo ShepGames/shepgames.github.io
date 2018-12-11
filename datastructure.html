@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Computer Science A level</h1>
+		<p> </p>
+	<h3 class="niceText">Data structures</h3>
+		<p class="handwriting">Computer's need to organize data in certain ways to be most efficient in read and write</p>
+		
+		<font color="red"><h4 class="handwriting">Stack </h4></font><img src="assets/stack.png" alt="graph" width=60 height=30></img>
+		<p class="handwriting">A first in, last out (FILO) structure which pushes values and pops them out. The first item in will go to the bottom, and if  </p>
+		<p class="handwriting">other items are pushed in then it will have to wait till they are popped before it will be popped itselff.</p>
+		<p class="handwriting">The advantages </p>
+		<font color="green"><p class="handwriting">Great for tracking backwards like an undo button </p></font>
+		
+		<p class="handwriting">The dis-advantages </p>
+		<font color="orange"><p class="handwriting">Takes ages to get a data item if other values are pushed into it</p></font>
+		
+		<font color="red"><h4 class="handwriting">Queue </h4></font><img src="assets/queue.png" alt="graph" width=60 height=30></img>
+		<p class="handwriting">A first in first out (FIFO) system where The first bit of data is the first to be read. This is the most common structure  </p>
+		<p class="handwriting">data is added via enqueue and taken out with the dequeue</p>
+		<p class="handwriting">The advantages </p>
+		<font color="green"><p class="handwriting">Data is accessed quicker after being queued</p></font>
+		
+		<p class="handwriting">The dis-advantages </p>
+		<font color="orange"><p class="handwriting">cannot get the last bit of data added, which means high priority data will wait.</p></font>
+		
+		<font color="red"><h4 class="handwriting">Tree </h4></font>
+		<p class="handwriting">Trees are used to sort data into left and right nodes. The root is the first node and has no parents. Parents are  </p>
+		<p class="handwriting">the nodes which give out to others. Leafs are at the bottom and only have parents. It is sorted by having < or > on eitherside of the tree.</p>
+		<p class="handwriting">It then sorts the data by checking each data point and travelling left or right depending on it's value.</p>
+		<p class="handwriting">The advantages </p>
+		<font color="green"><p class="handwriting">Reads and sorts data quickly: 0(logn) </p></font>
+		
+		<p class="handwriting">The dis-advantages </p>
+		<font color="orange"><p class="handwriting">complex to understand</p></font>
+		<font color="orange"><p class="handwriting">Takes longer to modify list: 0(logn)</p></font>
+		<p class="handwriting">When reading a tree, we always start b going down the left hand side.</p>
+		<p class="handwriting">We use Pre-traversal to gather the furthest left values as it travels round the list.</p>
+		<p class="handwriting">We use Post-order traversal which gathers the furthest right value.</p>
+		<p class="handwriting">We use In-order traversal by getting the lowest value as it goes round each time.</p>
+		
+		<font color="red"><h4 class="handwriting">Graph </h4></font><img src="assets/graph.png" alt="graph" width=160 height=100></img>
+		<p class="handwriting">A data type which stores data in a grid mapped way where each data item links to another via a value.  </p>
+		<p class="handwriting">The data structure uses an adjacency list to store the way in which the graph is linked.</p>
+		<p class="handwriting">It also uses an adjacency matrix which gathers all the links to data. A = {B:4,C:7} means A links to B via value 4 and C via value 7</p>
+		<p class="handwriting">The advantages </p>
+		<font color="green"><p class="handwriting">Easy way to link data items </p></font>
+		
+		<p class="handwriting">The dis-advantages </p>
+		<font color="orange"><p class="handwriting">Complex to understand</p></font>
+		<font color="orange"><p class="handwriting">Can take years to find the shortest distance to a point.</p></font>
+		<p class="handwriting">Values can be bi-directional where they have multiple and go both wasy, instead of mono-directional.</p>
+		
+		
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Computer Science A level</h1>
+		<p> </p>
+	<h3 class="niceText">Karnaugh maps</h3>
+		
+		<p class="handwriting">Karnaugh maps are methods we use to simplify a boolean algebraic expression. </p>
+		<p class="handwriting">They need to be written in a certain way to get the value. The map needs to contain every possible value for the values.</p>
+		<p class="handwriting">A and B both have the total possible values of 1 and 0 by themselves. When together they have 00, 01, 11, 10. Notice </p>
+		<p class="handwriting">that these numbers are not in order? Karnaugh maps must have it in this particular order to work. </p>
+		<p class="handwriting">.</p>
+		<p class="handwriting">Once you have laid out your map, you fill in the blanks by writing a 1 in every box where the question is true, and 0 where false.  </p>
+		<p class="handwriting">After this draw boxes (size of 1, 4, 9 ect..) if you cannot do a box, draw rectangles of 1xlength round true statements. </p>
+		<p class="handwriting">After this, check where the boxes lie on the map. Write down all the statements where it is true and cancel out what isn't needed.</p>
+		<p class="handwriting">The key to this is practice</p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Simplify the boolean expression ¬(¬((A^B))v(¬B^¬C) v¬C)</p>
+		<font color="grey"><p class="handwriting">This looks disgusting so we will use DeMorgan's laws to cancel out the ¬</p></font>
+		<font color="grey"><p class="handwriting">((A^B))v¬(B^C)v¬C</p></font>
+		<font color="grey"><p class="handwriting">We then want to seperate the ^ and v with brackets. I find this is easier to plot on the map. It is already written well here.</p></font>
+		<font color="grey"><p class="handwriting">Plot each true bit on the map. Below shows Not B and C</p></font>
+		<img src="assets/cb.png" alt="Logic gate" height="90" width="200">
+		<font color="grey"><p class="handwriting">(That is not a 1 in the (00,1) box. That is the cursor)</p></font>
+		<font color="grey"><p class="handwriting">We then plot in a AND B</p></font>
+		<img src="assets/AB.png" alt="Logic gate" height="80" width="190">
+		<font color="grey"><p class="handwriting">Finally plot not C</p></font>
+		<img src="assets/notC.png" alt="Logic gate" height="80" width="190">
+		<font color="grey"><p class="handwriting">We draw round the boxes to get each of them. We will see that NOT C is a major part, and A^B is a major part. </p></font>
+		<font color="grey"><p class="handwriting">We put these together to get an answer of: (A^B)v¬C</p></font>
+		
+		
+		
+		
+	</div>
+</body>
+</html>

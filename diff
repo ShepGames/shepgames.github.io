@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="#computing">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Maths A level</h1>
+		<p> </p>
+	<h3 class="niceText">Forces</h3>
+		<p class="handwriting">We use Forces using Newtons second law of <font color="red">F=MA</font> which is Force = mass x acceration</p>
+		<p class="handwriting">This means all the forces acting on a particle is equal to its mass multiplied by the acceleration of its movement.</p>
+		<p class="handwriting">For example, a person standing still will have a reaction force off the ground going up, and their weight as a force going down.</p>
+		<img src="assets/mass.png" alt="mass" width="150" height="200">
+		<p class="handwriting">Here we see the Force is R-mg which will be equal to ma. The force is the forces one way-the forces the other. In this scenario </p>
+		<p class="handwriting">it doesn't matter which way round they are, but if the particle is moving in a direction, the larger force - the smaller force is the </p>
+		<p class="handwriting">total force</p>
+		<p class="handwriting">If your particle is not on the ground, but hanging on a inextensible </p>
+		<p class="handwriting">(constant tention throughout) string then the force through it is Tension, not Reaction. </p>
+		
+		
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)A fish of mass 5kg is stationary and is suspended from a vertical fishing line. What is the tension in the fishing line?</p>
+		<font color="grey"><p class="handwriting">We know that the force is the Tension - the weight </p></font>
+		<font color="grey"><p class="handwriting">T-5g=5a</p></font>
+		<font color="grey"><p class="handwriting">As the fish is stationary, a=0</p></font>
+		<font color="grey"><p class="handwriting">Therefore T-5g </p></font>
+		<p class="handwriting">If a surface is rough we know that friction will be present, which is another force acting against the direction of movement </p>
+		<p class="handwriting">Friction = Reaction force x µ. µ is the coefficient of friction.</p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)A particle of 2kg is moving up a rough slope angled at 20º with force F, at an acceleration of 10 m/s^2. If µ is 0.8, Find the F </p>
+		<font color="grey"><p class="handwriting">Lets draw a diagram </p></font>
+		<img src="assets/trigFriction.png" alt="trig" width="200" height="100">
+		<font color="grey"><p class="handwriting">The mass is going down, so we will need to split this into two components to compare with the rest of the forces</p></font>
+		<font color="grey"><p class="handwriting">Using trig and S(o/h) C(a/h) T(o/a) we can work out the two components. </p></font>
+		<img src="assets/forces2.png" alt="trig" width="200" height="150"><img src="assets/trig.png" alt="trig" width="200" height="150">
+		<p class="handwriting">We use these diagrams to find the F=MA components ->: F+2gcos20-µR=2(10)  and  ^: R-2gsin20=2(0)  therefore R=2gsin20</p>
+		<p class="handwriting">By subing in values we get F+2gcos20-(0.8)2gsin20=2(10) Therefore F = 6.95 (3sf)</p>
+	</div>
+</body>
+</html>

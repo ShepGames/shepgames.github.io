@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Maths A level</h1>
+		<p> </p>
+	<h3 class="niceText">Intergration by substitution </h3>
+		<p class="handwriting">Another way to intergrate difficult equations is to substitute a different value in. </p>
+		<p class="handwriting">Sometimes you are given a value, other times you are not. It is difficult to pick a value but with practice it is easier.</p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Find ∫√(1-x^2)dx </p>
+		<font color="grey"><p class="handwriting">∫√(1-x^2)dx has a 1-somthing squared. This reminds us of the 1-cos^2(x) and 1-sin^2(x). Lets make x = cosu</p></font>
+		<font color="grey"><p class="handwriting">With this we can make u = arccosx</p></font>
+		<font color="grey"><p class="handwriting">∫√(1-cos^2(u))dx</p></font>
+		<font color="grey"><p class="handwriting">∫√(sin^2(u))dx </p></font>
+		<font color="grey"><p class="handwriting">∫sinudx we want it in terms of du rather than dx, so we can intergrate it. </p></font>
+		<font color="grey"><p class="handwriting">x = cosu so dx/du = -sinu</p></font>
+		<font color="grey"><p class="handwriting">∫sinu(-sinu)du = ∫-sin^2(u) du</p></font>
+		<font color="grey"><p class="handwriting">=(-1/3)(sin^3(u))+c which will be horrible to sub x in. Instead use a trig identity:</p></font>
+		<font color="grey"><p class="handwriting">∫-(0.5-0.5cos2u) du = ∫0.5cos2u-0.5 du</p></font>
+		<font color="grey"><p class="handwriting">(0.5/2)sin2u-0.5u+c which is c-0.5u+0.25sin2u</p></font>
+		<font color="grey"><p class="handwriting">if x^2 = cos^2(u) then 1-x^2 = sin^2(u) thus √(1-x^2) = sinu</p></font>
+		<font color="grey"><p class="handwriting">c-0.5u-0.25sin2u = c-0.5(arccosx)+√(1-x^2)</p>
+		
+		
+	
+		
+	</div>
+</body>
+</html>

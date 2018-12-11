@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Maths A level</h1>
+		<p> </p>
+	<h3 class="niceText">Optimization </h3>
+		<p class="handwriting">Finding a value which maximizes the volume, or surface area depending on what you want.</p>
+		<p class="handwriting">Typicaly you will be given a shape and it's volume or area. You will need to work out the missing equation. </p>
+		<p class="handwriting">Once you work out the equations, you will sub them in together to get rid of values which over complicate it (like height if it</p>
+		<p class="handwriting">is not relevant). We then want to work out maximum values, the key word here is max. We will want to differentiate and find the</p>
+		<p class="handwriting">max values.</p>
+		
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1) A company makes bean cans and want to maximize its bean produce.</p>
+		<img src="assets/cylinder.png" alt="shape"></img>
+		<p class="handwriting">i)Given the Area is 50cm^2, show that the volume is: (50-2Pi*r^2)r/2 = V</p>
+		<font color="grey"><p class="handwriting">We want to find the volume: h*Pi*r^2 = V</p></font>
+		<font color="grey"><p class="handwriting">We also write out the Area equation: 50 = 2Pi*r^2 +2Pi*rh</p></font>
+		<font color="grey"><p class="handwriting">We don't want h so make h the subject and sub it all into Volume</p></font>
+		<font color="grey"><p class="handwriting">(50-2Pi*r^2)/(2Pi*r)=h</p></font>
+		<font color="grey"><p class="handwriting">((50-2Pi*r^2)/(2Pi*r))*Pi*r^2 = V Which simplifies to: (50-2Pi*r^2)r/2 = V</p></font>
+		<font color="grey"><p class="handwriting">Therefore QED </p></font>
+	<p class="handwriting">ii)Find a value for the radius where r is a maximum </p>
+		<font color="grey"><p class="handwriting">We now ant to differentiate the Volume to get r.</p></font>
+	<font color="grey"><p class="handwriting">(50-2Pi*r^2)r/2 = V --> dV/dr = 25-3Pir^2</p></font>
+	<font color="grey"><p class="handwriting">At the stationar point the gradient is 0 so: 0 = 25-3Pir^2</p></font>
+		<font color="grey"><p class="handwriting">r^2 = 25/3Pi --> r=1.62</p></font>
+	<font color="grey"><p class="handwriting">To check this is a max we differentiate again to get d^V/dr^2 = -6Pir. </p></font>
+	<font color="grey"><p class="handwriting">-6Pi(1.62)<0 therefore maximum value at r=1.62cm</p></font>
+		
+	
+		
+	</div>
+</body>
+</html>

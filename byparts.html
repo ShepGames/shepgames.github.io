@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Maths A level</h1>
+		<p> </p>
+	<h3 class="niceText">Intergration by parts </h3>
+		<p class="handwriting">Sometimes intergration cannot be done using conventional methods. </p>
+		<p class="handwriting">There will be two values multiplied together which causes issue.</p>
+		<p class="handwriting">∫2xsinx dx is an example of this. We will use integration by parts to find the answer.</p>
+		<p class="handwriting">We pick a u, and dv, we want u to be the easiest to cancle out. 2x differentiates to 2 so this is better for u.  </p>
+		<p class="handwriting">u = 2x and dv=sinxdx. we integrate dv to get v=-cosx+c (but ignore the c)</p>
+		<p class="handwriting">we also find du/dx which is 2.  </p>
+		<p class="handwriting">All these values are needed for the next stage which is the formula:  </p>
+		<p class="handwriting">(u)(v)-∫(v)du = (2x)(-cosx)-∫(-cosx)(2)dx</p>
+		<p class="handwriting">Sometimes you will get an intergral which needs inergrating by parts a second time.</p>
+	
+		
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Find ∫2x^2 *cosx dx </p>
+		<font color="grey"><p class="handwriting">u=2x^2, du=4xdx</p></font>
+		<font color="grey"><p class="handwriting">dv=cosxdx</p></font>
+		<font color="grey"><p class="handwriting">v=sinx+c</p></font>
+		<font color="grey"><p class="handwriting">So: (2x^2)(sinx)-∫sinx4xdx</p></font>
+		<font color="grey"><p class="handwriting">We cannot do the second part so intergrate again: </p></font>
+		<font color="grey"><p class="handwriting">u=4x, du=4dx</p></font>
+		<font color="grey"><p class="handwriting">dv=sinxdx</p></font>
+		<font color="grey"><p class="handwriting">v=-cosx+c</p></font>
+		<font color="grey"><p class="handwriting">(2x^2)(sinx)-((4x)(-cosx)-∫-cosx4dx)</p></font>
+		<font color="grey"><p class="handwriting">=2(x^2)sinx+4xcosx-4sinx+c</p></font>
+		
+	
+		
+	</div>
+</body>
+</html>

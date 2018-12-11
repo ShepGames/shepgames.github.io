@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notes</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+		<ul>
+		  <li><a class="active" href="index.html">Home</a></li>
+		  <li><a href="maths.html">Maths</a></li>
+		  <li><a href="cs.html">Computer Science</a></li>
+		  <li><a href="computing.html">Computing</a></li>
+		</ul>
+	<div class="page">
+		<p></p>
+	</div>
+<div id="example1" id="full-size">
+	<div id="#home" class="page paper">
+	<h1 class="niceText">Computer Science A level</h1>
+		<p> </p>
+	<h3 class="niceText">Binary</h3>
+		<p class="handwriting">Binary is simply the way to represent numbers in a computer system. 1s and 0s represent on and off.</p>
+		<p class="handwriting">Binary uses base-two to store numbers.This means the far right digit represtnes 1, the next one to the left is 2, the next 4... </p>
+		<p class="handwriting">A single number such as 1 or 0 is known as a bit</p>
+		<p class="handwriting">4 bits is a nibble</p>
+		<p class="handwriting">8 bits is a byte</p>
+		<p class="handwriting">We typically use bytes to represent ASCII, Unicode uses 16-bits. </p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Convert the number 115 to binary</p>
+		<font color="grey"><p class="handwriting">Firstly we write out the base-two numbers, and go from the left across working out what to add</p></font>
+		<font color="grey"><p class="handwriting">128,64,32,16,8,4,2,1</p></font>
+		<font color="grey"><p class="handwriting">0  , 1, 1, 1,0,0,1,1</p></font>
+		<font color="grey"><p class="handwriting">We see 128 is too big, so put a 0. 64 is in the number so we put that in, we further add 32 to get it higher.</p></font>
+		<font color="grey"><p class="handwriting">When we get to 8, we see that will be too big so do not put it in.</p></font>
+		<font color="grey"><p class="handwriting">This gives us an answer of 01110011 </p></font>
+		<font color="red"><h4 class="handwriting">Hex </h4></font>
+		<p class="handwriting">Hex is a way we represent binary numbers and characters in an ASCII chart.  </p>
+		<p class="handwriting">We have to remember that the value 10 is equal to A in the hex world. From there we can count </p>
+		<p class="handwriting">up to 15 which is F. When converting to hex we need an 8-bit binary number. If you are given a denary number, </p>
+		<p class="handwriting">you will need to convert it to binary. With the binary number, you will split it in half to 4-bit nibbles. </p>
+		<p class="handwriting">Calculate the value of each 4 bit number, the highest it can be is 15.</p>
+		<p class="handwriting">Write the value you get under neath each number, and find its corrosponding letter if needed. This is your hex value.</p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Convert the binary number 10010110 to Hex </p>
+		<font color="grey"><p class="handwriting">Firstly we split it to nibbles</p></font>
+		<font color="grey"><p class="handwriting">1001 0110</p></font>
+		<font color="grey"><p class="handwriting">we then convert to denary</p></font>
+		<font color="grey"><p class="handwriting">(8+1) (4+2) = 10 and 6</p></font>
+		<font color="grey"><p class="handwriting">10 is A so our hex value is A6</p></font>
+		<font color="red"><h4 class="handwriting">Adding Binary numbers </h4></font>
+		<p class="handwriting">You will be likely asked to add binary numbers. To do this we must remember some rules:</p>
+		<font color="green"><p class="handwriting">0+0=0</p></font>
+		<font color="green"><p class="handwriting">0+1=1</p></font>
+		<font color="green"><p class="handwriting">1+1=10, or 0 and carry the 1</p></font>
+		<font color="green"><p class="handwriting">1+1+1=11 or 1 carry the 1</p></font>
+		<p class="handwriting">If you get a number bigger than 8-bits, we call this an overflow error. It means the number is too big to be stored.</p>
+		<p class="handwriting">This can cause potential problems as the number may not be represented fully in the system.</p>
+		<font color="blue"><p class="handwriting">Example: </p></font>
+		<p class="handwriting">1)Add the binary numbers 10010110 to 01101110 </p>
+		<font color="grey"><p class="handwriting">Firstly we line them up, then start on the right and apply our rules</p></font>
+		<font color="grey"><p class="handwriting">10010110</p></font>
+		<font color="grey"><p class="handwriting">01101110+</p></font>
+		<font color="grey"><p class="handwriting">--------</p></font>
+		<font color="grey"><p class="handwriting">100000100</p></font>
+		<font color="grey"><p class="handwriting"> 1111111</p></font>
+		<font color="grey"><p class="handwriting">Here we have kepts carrying the 1 and have an overflow error.</p></font>
+		<font color="grey"><p class="handwriting">Our answer is: 100000100</p></font>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+body {background-color: green;}
+h1   {color: white;}
+p    {color: white;}
+</style>
+</head>
+<body class="content">
+
+<h1>Football goal calculator</h1>
+<p>Fill in the boxes below: </p>
+	<table>
+		<tr>
+    <th>Home XG:  </th>
+    <th><input type="text" id="homeXG" ></th> 
+    
+  </tr>
+		<tr>
+		<th>Away XGA:  </th>
+    <th><input type="text" id="awayXG" ></th> 
+    
+  </tr>
+		<tr>
+	<th>Total games palyed:  </th>
+    <th><input type="text" id="total"></th> 
+    
+  </tr>
+	
+		<tr>
+	<th>home Overunder Achiever (+/-): </th>
+    <th><input type="text" id="ou" ></th> 
+    
+  </tr>
+		<tr>
+	<th>Away XG: </th>
+    <th><input type="text" id="awayxg" ></th> 
+    
+  </tr>
+		<tr>
+	<th>Home XGA: </th>
+    <th><input type="text" id="homexga" ></th> 
+    
+  </tr>
+		<tr>
+	<th>away Overunder Achiever (+/-): </th>
+    <th><input type="text" id="awayov" ></th> 
+    
+  </tr>
+	</table>
+	<input type="submit" onClick="calculate()" value="Calculate">
+
+<p id="goals">Goals: </p>
+<script>
+			function calculate(){
+				var home = parseFloat(document.getElementById("homeXG").value);
+				console.log(home);
+				var away = parseFloat(document.getElementById("awayXG").value);
+				console.log(away);
+				var hgames = parseFloat(document.getElementById("total").value);
+				console.log(hgames);
+				var o = parseFloat(document.getElementById("ou").value);
+				console.log(o);
+				var homeGoals = parseFloat((home+away/(total))+o);
+				var o = parseFloat(document.getElementById("homexg").value);
+				var output = String(homeGoals);
+				console.log(output);
+				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total home goals:"+homeGoals;
+				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total away goals:"+awayGoals;
+			}
+</script>
+</body>
+
+</html>

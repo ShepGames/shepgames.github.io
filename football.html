@@ -11,6 +11,7 @@ body {background-color: green;}
 h1   {color: white;}
 p    {color: white;}
 </style>
+	<title>Football</title>
 </head>
 <body class="content">
 
@@ -35,11 +36,6 @@ p    {color: white;}
   </tr>
 	
 		<tr>
-	<th>home Overunder Achiever (+/-): </th>
-    <th><input type="text" id="ou" ></th> 
-    
-  </tr>
-		<tr>
 	<th>Away XG: </th>
     <th><input type="text" id="awayxg" ></th> 
     
@@ -50,10 +46,27 @@ p    {color: white;}
     
   </tr>
 		<tr>
-	<th>away Overunder Achiever (+/-): </th>
+	<th>Away XG Overunder Achiever (+/-): </th>
     <th><input type="text" id="awayov" ></th> 
     
   </tr>
+		<tr>
+	<th>Away XGA Overunder Achiever (+/-): </th>
+    <th><input type="text" id="awayov2" ></th> 
+    
+  </tr>
+		<tr>
+	<th>home XG Overunder Achiever (+/-): </th>
+    <th><input type="text" id="ou" ></th> 
+    
+  </tr>
+		<tr>
+	<th>Home XGA Overunder Achiever (+/-): </th>
+    <th><input type="text" id="ou2" ></th> 
+    
+  </tr>
+		
+		
 	</table>
 	<input type="submit" onClick="calculate()" value="Calculate">
 
@@ -67,13 +80,17 @@ p    {color: white;}
 				var tot = parseFloat(document.getElementById("total").value);
 				
 				var o = parseFloat(document.getElementById("ou").value);
+				var o2 = parseFloat(document.getElementById("ou2").value);
+				var awayo = parseFloat(document.getElementById("awayov").value);
+				var awayo2 = parseFloat(document.getElementById("awayov2").value);
 				console.log(o);
-				var homeGoals = parseFloat(((home+away)/(tot))+o);
+				var homeGoals = parseFloat(((home+away)/(tot))+o+awayo2);
 				var homexga = parseFloat(document.getElementById("homexga").value);
 				var awayxg = parseFloat(document.getElementById("awayxg").value);
-				var awayo = parseFloat(document.getElementById("awayov").value);
+				
+				
 				var output = String(homeGoals);
-				var awayGoals = parseFloat(((awayxg+homexga)/(tot))+awayo);
+				var awayGoals = parseFloat(((awayxg+homexga)/(tot))+awayo+o2);
 				var output2 = String(awayGoals);
 				console.log(output);
 				
@@ -81,6 +98,7 @@ p    {color: white;}
 				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total away goals:"+output2;
 			}
 </script>
+	<p>Disclaimer: The algorithm follows an equation given. The equation is an estimate and may not be the correct answer. This code does not take responsibilit of money loss</p>
 </body>
 
 </html>

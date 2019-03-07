@@ -16,6 +16,7 @@ p    {color: white;}
 
 <h1>Football goal calculator</h1>
 <p>Fill in the boxes below: </p>
+	<p>If it doesn't work when pressing submit, refresh the page and make sure you enter numbers in every box.</p>
 	<table>
 		<tr>
     <th>Home XG:  </th>
@@ -63,16 +64,21 @@ p    {color: white;}
 				console.log(home);
 				var away = parseFloat(document.getElementById("awayXG").value);
 				console.log(away);
-				var hgames = parseFloat(document.getElementById("total").value);
-				console.log(hgames);
+				var tot = parseFloat(document.getElementById("total").value);
+				
 				var o = parseFloat(document.getElementById("ou").value);
 				console.log(o);
-				var homeGoals = parseFloat((home+away/(total))+o);
-				var o = parseFloat(document.getElementById("homexg").value);
+				var homeGoals = parseFloat(((home+away)/(tot))+o);
+				var homexga = parseFloat(document.getElementById("homexga").value);
+				var awayxg = parseFloat(document.getElementById("awayxg").value);
+				var awayo = parseFloat(document.getElementById("awayov").value);
 				var output = String(homeGoals);
+				var awayGoals = parseFloat(((awayxg+homexga)/(tot))+awayo);
+				var output2 = String(awayGoals);
 				console.log(output);
-				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total home goals:"+homeGoals;
-				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total away goals:"+awayGoals;
+				
+				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total home goals:"+output;
+				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total away goals:"+output2;
 			}
 </script>
 </body>

@@ -30,7 +30,7 @@ p    {color: white;}
     
   </tr>
 		<tr>
-	<th>Total games palyed:  </th>
+	<th>Total games played:  </th>
     <th><input type="text" id="total"></th> 
     
   </tr>
@@ -89,9 +89,9 @@ p    {color: white;}
 				var awayxg = parseFloat(document.getElementById("awayxg").value);
 				
 				
-				var output = String(homeGoals);
+				var output = String(homeGoals.toFixed(2));
 				var awayGoals = parseFloat(((awayxg+homexga)/(tot))+awayo+o2);
-				var output2 = String(awayGoals);
+				var output2 = String(awayGoals.toFixed(2));
 				console.log(output);
 				
 				document.getElementById("goals").innerHTML  = document.getElementById("goals").innerHTML + ('<br/>') + "Total home goals:"+output;

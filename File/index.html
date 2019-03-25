@@ -19,7 +19,8 @@ function entered(){
 	//enter the cookie data into the device
 	var user = document.getElementById("usname");
 	if (user != "" && user != null) { //validate input
-		setCookie("name",user,365);
+		setCookie("usname",user,365);
+		setCookie("pointsYMCA",30,365);
 		window.location.replace("mainpage.html");
 	}
 }

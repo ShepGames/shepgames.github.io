@@ -17,10 +17,14 @@ function setCookie(cname,cvalue,exdays) {
 
 function entered(){
 	//enter the cookie data into the device
-	var user = document.getElementById("usname");
+	console.log("Entered");
+	var user = document.getElementById("name");
 	if (user != "" && user != null) { //validate input
+		console.log("correct data");
 		setCookie("usname",user,365);
+		console.log("Cookie 1");
 		setCookie("pointsYMCA",30,365);
+		console.log("Cookie 2");
 		window.location.replace("mainpage.html");
 	}
 }

@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+function setCookie(cname,cvalue,exdays) {
+  //add the cookie data into the phone
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function entered(){
+	//enter the cookie data into the device
+	var user = document.getElementById("name");
+	if (user != "" && user != null) { //validate input
+		setCookie("name",user,365);
+		window.location.replace("mainpage.html");
+	}
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function checkCookie() {
+  var user=getCookie("name");
+	//wlecome the user if there is a cookie
+	//the cookie will show that the user has been here ebfore
+  if (user != "") {
+   window.location.replace("mainpage.html");
+  } 
+}
+</script>	
+
+
+</head>
+<body onload="checkCookie()">
+<div class="header">
+	<table style="width:100%">
+  <th><h1>Passport To Independence</h1></th>
+  
+	<th><img src="assets/logo.png" alt="YMCA logo" width=100px height=100px></th>
+	  </tr>
+	</table>
+</div>
+	<br>
+	<br>
+	<div class="main">
+		
+		<input id="name" class="textbox" type="text" name="FirstName" placeholder="Firstname"><br>
+		<br>
+		<button style="background-color: #131014; color:white; margin: 0;" class="textbox"type="button" onclick="entered()">Click Me!</button>
+	</div>
+	<br><br>
+	
+	
+	<div align="center" class="contentbox">
+		<h3>Welcome!</h3>
+		<p>Welcome to the Passport to independence app! This app helps you track your progress,
+			compete with your friends and gather points from doing so. Points can be used to unlock
+			new characters and awards. 
+		<h3>Your data</h3>
+		<p>Your data is entirely stored using cookies. This means data is stored on your 
+		device's browser. Please do not clear cookies, otherwise your data will be lost. Use the same browser, 
+		as the cookies will not be present. </p>
+		<h3>If you lose your data</h3>
+		<p>If you do indeed lose your data, you can get it back with the help of an 
+			adult instructor. 
+		</p>
+	</div>
+	
+</body>
+</html>

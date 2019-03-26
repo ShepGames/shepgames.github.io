@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+	</head>
+<body>
+
+<div class="header">
+	<table style="width:100%">
+  <th><h1>Revision app</h1></th>
+  
+	<th><img src="assets/logo.png" alt="logo" width=100px height=100px></th>
+	  </tr>
+	</table>
+</div>
+	<br>
+	<div class="contentbox">
+		<h3>Select your subject</h3>
+</div>
+		</div>
+		<br><br>
+	
+	<a href="#home"><div class="contentbox">
+	<br><br>
+		<h4>A level Maths</h4>
+		<br><br>
+		</div></a>
+<br><br>
+	<a href="#home"><div class="contentbox">
+	<br><br>
+	<h4>A level Computer Science</h4>
+	<br><br>
+		</div></a>
+<br><br><br><br>
+<script>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+//get the points
+var points=getCookie("pointsYMCA");;
+
+	
+}
+</script>
+		
+	
+		
+	<div class="topnav">
+  <a style="width:20%"class="active" href="mainpage.html">Home</a>
+  <a style="width:15%"href="#news">Take a test</a>
+  <a style="width:15%"href="stats.html">Stats</a>
+  
+
+</div>
+</body>
+</html>

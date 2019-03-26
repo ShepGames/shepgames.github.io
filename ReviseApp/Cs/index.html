@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+var points=getCookie("usname");
+
+
+</script>	
+
+
+</head>
+	
+<body onload="checkCookie()">
+<div class="header">
+	<table style="width:100%">
+  <th><h1>Maths</h1></th>
+  
+	<th><img src="assets/logo.png" alt="logo" width=100px height=100px></th>
+	  </tr>
+	</table>
+</div>
+	<br>
+	<br>
+	
+	
+</body>
+</html>

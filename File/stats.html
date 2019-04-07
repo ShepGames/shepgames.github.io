@@ -10,13 +10,16 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="test.html">Home</a>
+  <a href="#">Passport</a>
+  <a href="stats.html">Trophies</a>
+  <a href="#">About</a>
+  <a href="#">Settings</a>
+</div>
 <div class="header">
-	<table style="width:100%">
-  <th><h1>Passport To Independence</h1></th>
-  
-	<th><img src="assets/logo.png" alt="YMCA logo" width=100px height=100px></th>
-	  </tr>
-	</table>
+	<span style="font-size:30px;cursor:pointer;color:black;" onclick="openNav()">&#9776;</span>
 </div>
 	<br>
 	<div class="contentbox">
@@ -51,13 +54,14 @@
 <br><br><br><br>
 	
 
-	<div class="topnav">
-  <a style="width:20%"class="active" href="mainpage.html">Home</a>
-  <a style="width:15%"href="#news">Passport</a>
-  <a style="width:15%"href="#contact">Stats</a>
-  
-<br>
-		
-</div>
 </body>
+<script>
+	function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+</script>
 </html>

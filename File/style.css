@@ -1,19 +1,16 @@
 
 body {
 
-  background: repeating-linear-gradient(
-  45deg,
-  #470560,
-  #470560 25px,
-  #921dc4 25px,
-  #921dc4 50px
-);
+  background-image: url("btri.jpg");
 }
 
 .header {
-  background-color:  #0eb297;
+  background-color:  #ffffff;
   color: #ffffff;
-  padding: 5px;
+  left:0;
+  right:0;
+	width:100%;
+
 }
 .buy {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -42,7 +39,43 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 .main{
 	
 	left: 0;
@@ -61,14 +94,17 @@ body {
 }
 
 .contentbox{
-  z-index:-1;
+  width:100%; 
+  
   left: 0;
   right: 0;
-  background-color:  #13badb;
+  background-color:  #111;
   color: #ffffff;
   padding: 5px;
   font-size:14pt;
   text-align: center;
-  margin: auto;
-  width: 80%;
+  
+  
+  background-image: url("tri.jpg");
+  
 }

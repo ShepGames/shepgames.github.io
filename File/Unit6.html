@@ -26,7 +26,7 @@
 	
 	</div>
 	<br>
-	<div class="contentboxNot">
+	<button id="6A" class="contentboxNot" onclick="Set('1')"><div>
 		<h3>Basic legal rights and responsibilities  </h3>
 		<table width="100%">
 			<th>
@@ -35,8 +35,8 @@
 			
 		</table>
 	
-	</div>
-	<div class="contentboxNot">
+	</div></button>
+	<button id="6B" class="contentboxNot" onclick="Set('2')"><div>
 		<h3>Social interaction </h3>
 		<table width="100%">
 			<th>
@@ -61,8 +61,8 @@
 			<tr>
 		</table>
 	
-	</div>
-	<div class="contentboxNot">
+	</div></button>
+	<button id="6C" class="contentboxNot" onclick="Set('3')"><div>
 		<h3>Diversity </h3>
 		<table width="100%">
 			<th>
@@ -80,18 +80,109 @@
 				
 		</table>
 	
-	</div>
+	</div></button>
 <br><br><br><br>
 	
 
+<div class="form-popup" id="myForm">
+  <div class="form-container">
+    <h1>Instructor Login</h1>
+	<p id="numOfThing">_</p>
+    <label for="email"><b>Username</b></label>
+    <input id="username" type="text" placeholder="Enter username" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input id="password" type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn" onclick="saveInfo()">Confirm task</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </div>
+</div>
+	
 </body>
 <script>
-	function openNav() {
-  document.getElementById("mySidenav").style.display = "block";
+var current="";//store the current task being completed
+var units = getCookie("U6YMCA"); //sore as string
+	console.log(units);
+var array = units.split(",");
+
+setboxes(array.length,6);
+function setboxes(num,task){
+	var idname=task.toString();
+	var alpha=['A','B','C','D','E','F','G','H','I','J','K','L'];
+	for(i=0;i<num;i++){
+		
+		if(array[i]=="y")
+		{
+			console.log("yes");
+			idname=task.toString()+alpha[i];
+			console.log(idname);
+			document.getElementById(idname).className = "contentboxDone";
+		}
+	}
+}
+function Set(num){
+	current=num;
+	
+	
+	openForm();
+	
+}
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+	document.getElementById("numOfThing").innerHTML = "Task "+current;
+	console.log(current);
+	//reset the boxes
+	document.getElementById("password").value = ""
+	document.getElementById("username").value = ""
 }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.display = "none";
+function closeForm() {
+	
+	document.getElementById("myForm").style.display = "none";
+  
+}
+function saveInfo() {
+	
+	if((document.getElementById("password").value == "abc")&&(document.getElementById("username").value == "abc")){
+		//save info and close if the username and password is correct
+		save(parseInt(current));
+		document.getElementById("myForm").style.display = "none";
+	}else{
+		
+	}
+}
+function save(pos){
+	array[pos-1]="y";
+	setboxes(array.length,6);
+	var string="";
+	for (i=0;i<array.length;i++){
+		string=array[i]+",";
+	}
+	setCookie("U6YMCA",string,365);
+	//save to string
+}
+function setCookie(cname,cvalue,exdays) {
+  //add the cookie data into the phone
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 </script>
 </html>

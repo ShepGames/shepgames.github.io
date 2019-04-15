@@ -123,7 +123,7 @@ var current="";//store the current task being completed
 var units = getCookie("U5YMCA"); //sore as string
 	console.log(units);
 var array = units.split(",");
-
+console.log(array)
 setboxes(array.length,5);
 function setboxes(num,task){
 	var idname=task.toString();
@@ -177,7 +177,8 @@ function save(pos){
 	for (i=0;i<array.length;i++){
 		string=array[i]+",";
 	}
-	setCookie("U5YMCA",string,365);
+	console.log(string)
+	
 	//save to string
 }
 function setCookie(cname,cvalue,exdays) {

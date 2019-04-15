@@ -21,9 +21,19 @@ function entered(){
 	var user = document.getElementById("name");
 	if (user != "" && user != null) { //validate input
 		console.log("correct data");
-		setCookie("usname",user,365);
+		setCookie("usnameYMCA",user,365);
 		console.log("Cookie 1");
-		setCookie("pointsYMCA",30,365);
+		setCookie("pointsYMCA",0,365);
+		setCookie("U1YMCA","n,n,n,n",365);
+		setCookie("U2YMCA","n,n,n,n,n",365);
+		setCookie("U3YMCA","n,n,n,n,n,n,n",365);
+		setCookie("U4YMCA","n,n,n,n,n,n",365);
+		setCookie("U5YMCA","n,n,n,n",365);
+		setCookie("U6YMCA","n,n,n",365);
+		setCookie("U7YMCA","n,n,n",365);
+		setCookie("U8YMCA","n,n,n",365);
+		setCookie("U9YMCA","n,n",365);
+		setCookie("U10YMCA","n,n,n",365);
 		console.log("Cookie 2");
 		
 		window.location.replace("test.html");
@@ -45,7 +55,7 @@ function getCookie(cname) {
   return "";
 }
 function checkCookie() {
-  var user=getCookie("usname");
+  var user=getCookie("usnameYMCA");
 	//wlecome the user if there is a cookie
 	//the cookie will show that the user has been here ebfore
   if (user != "") {

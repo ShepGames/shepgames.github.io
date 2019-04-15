@@ -108,3 +108,33 @@ body {
   background-image: url("tri.jpg");
   
 }
+.contentboxNot{
+  width:98%; 
+  left: 0;
+  right: 0;
+  
+  background-color:  #111;
+  color: #ffffff;
+  padding: 5px;
+  font-size:14pt;
+  text-align: center;
+  
+  
+  background-image: url("red.jpg");
+  
+}
+.contentboxDone{
+  width:98%; 
+  left: 0;
+  right: 0;
+  
+  background-color:  #111;
+  color: #ffffff;
+  padding: 5px;
+  font-size:14pt;
+  text-align: center;
+  
+  
+  background-image: url("green.jpg");
+  
+}

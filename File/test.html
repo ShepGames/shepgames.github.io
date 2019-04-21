@@ -101,7 +101,7 @@ function getCookie(cname) {
 }
 var comp=0;//decide on size of chart
 var points=getCookie("pointsYMCA");
-var level=getCookie("levelYMCA");
+var level=parseInt(getCookie("levelYMCA"));
 
 window.onload = move();
 function move() {

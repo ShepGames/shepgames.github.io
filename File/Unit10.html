@@ -134,16 +134,14 @@ function Set(num){
 	current=num;
 	
 	
-	openForm();
+	openForm(num);
 	
 }
-function openForm() {
+function openForm(num) {
 	var idname="";
-	var num="10";
-	var alpha=['A','B','C','D','E','F','G','H','I','J','K','L'];
 	
-	for(i=0; i<12;i++){
-		idname=num+alpha[i];
+	var alpha=['A','B','C','D','E','F','G','H','I','J','K','L'];
+	idname="10"+alpha[num-1];
 	  if(document.getElementById(idname).className != "contentboxDone"){
 	  document.getElementById("myForm").style.display = "block";
 		document.getElementById("numOfThing").innerHTML = "Task "+current;
@@ -152,7 +150,7 @@ function openForm() {
 		document.getElementById("password").value = "";
 		document.getElementById("username").value = "";
 	}
-	}
+	
 }
 
 function closeForm() {

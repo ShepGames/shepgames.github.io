@@ -186,18 +186,23 @@ function Set(num){
 	current=num;
 	
 	
-	openForm();
+	openForm(num);
 	
 }
-function openForm() {
-	if(document.getElementById(idname).className != "contentboxDone"){
-  document.getElementById("myForm").style.display = "block";
-	document.getElementById("numOfThing").innerHTML = "Task "+current;
-	console.log(current);
-	//reset the boxes
-	document.getElementById("password").value = "";
-	document.getElementById("username").value = "";
+function openForm(num) {
+	var idname="";
+	
+	var alpha=['A','B','C','D','E','F','G','H','I','J','K','L'];
+	idname="10"+alpha[num-1];
+	  if(document.getElementById(idname).className != "contentboxDone"){
+	  document.getElementById("myForm").style.display = "block";
+		document.getElementById("numOfThing").innerHTML = "Task "+current;
+		console.log(current);
+		//reset the boxes
+		document.getElementById("password").value = "";
+		document.getElementById("username").value = "";
 	}
+	
 }
 
 function closeForm() {

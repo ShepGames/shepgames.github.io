@@ -114,10 +114,10 @@ var current="";//store the current task being completed
 var units = getCookie("U10YMCA"); //sore as string
 	console.log(units);
 var array = units.split(",");
-
+var idname ="";
 setboxes(array.length,10);
 function setboxes(num,task){
-	var idname=task.toString();
+	idname=task.toString();
 	var alpha=['A','B','C','D','E','F','G','H','I','J','K','L'];
 	for(i=0;i<num;i++){
 		

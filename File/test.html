@@ -99,12 +99,22 @@ function getCookie(cname) {
   }
   return "";
 }
+function setCookie(cname,cvalue,exdays) {
+  //add the cookie data into the phone
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 var comp=0;//decide on size of chart
 var points=getCookie("pointsYMCA");
 var level=parseInt(getCookie("levelYMCA"));
 	level=level/2;
-if (level >=90){
-	level=100;
+if (level >=80 && level< 100){
+	level=95;
+	setCookie("levelYMCA",95,365);
+	}else if(level > 100){
+			 level=100;
 	}
 window.onload = move();
 function move() {

@@ -101,6 +101,7 @@ function getCookie(cname) {
 }
 var comp=0;//decide on size of chart
 var points=getCookie("pointsYMCA");
+var level=getCookie("levelYMCA");
 
 window.onload = move();
 function move() {
@@ -108,7 +109,7 @@ function move() {
   var width = 1;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= comp) {
+    if (width >= level) {
       clearInterval(id);
     } else {
       width++; 

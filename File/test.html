@@ -112,7 +112,8 @@ var level=parseInt(getCookie("levelYMCA"));
 	level=level/2;
 if (level >=80 && level< 100){
 	level=95;
-	setCookie("levelYMCA",95,365);
+	var dot =95*2;
+	setCookie("levelYMCA",dot,365);
 	}else if(level > 100){
 			 level=100;
 	}

@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+<div class="header">
+	<table style="width:100%">
+	
+<th><img src="Logo.jpg" alt="YMCA logo" width=290px height=80px></th>
+	  </tr>
+	</table>
+	
+</div>
+	<br>
+	<div class="contentbox">
+		<h3>Admin</h3>
+		<p>Select the following to reset the account </p>
+		<h3>Points</h3>
+		<div class="main">
+		<input class="textbox" value="" id="points" type="text" name="points">
+		<br><br>
+		<button id="buttonP" style="background-color: #131014; color:white; margin: 0;" class="textbox" onclick="checkPoints()">
+			Enter points</button>
+			</div>
+	</div>
+<br><br><br><br>
+	
+
+</body>
+<script>
+	function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+function setCookie(cname,cvalue,exdays) {
+  //add the cookie data into the phone
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function checkPoints(){
+	var number=document.getElementById("points").value;
+	if(!isNaN(number)){
+		console.log(number);
+		setCookie("pointsYMCA",number,365);
+	}	
+}
+</script>
+</html>

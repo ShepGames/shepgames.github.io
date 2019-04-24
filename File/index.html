@@ -20,12 +20,13 @@ function entered(){
 	console.log("Entered");
 	var user = document.getElementById("name");
 	if (user != "" && user != null) { //validate input
+		//SET EVERY SINGLE COOKIE BELOW
 		console.log("correct data");
 		setCookie("usnameYMCA",user,365);
 		console.log("Cookie 1");
-		setCookie("pointsYMCA",2,365);
+		setCookie("pointsYMCA",2,365); //start with 2 points
 		setCookie("levelYMCA",0,365);
-		setCookie("U1YMCA","n,n,n,n",365);
+		setCookie("U1YMCA","n,n,n,n",365); //store in the list form
 		setCookie("U2YMCA","n,n,n,n,n",365);
 		setCookie("U3YMCA","n,n,n,n,n,n,n",365);
 		setCookie("U4YMCA","n,n,n,n,n,n",365);
@@ -42,25 +43,25 @@ function entered(){
 }
 function getCookie(cname) {
   var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
+  var decodedCookie = decodeURIComponent(document.cookie); //decode cookie
+  var ca = decodedCookie.split(';'); //decode the string
   for(var i = 0; i < ca.length; i++) {
     var c = ca[i];
     while (c.charAt(0) == ' ') {
       c = c.substring(1);
     }
     if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
+      return c.substring(name.length, c.length); //return the real cookie
     }
   }
-  return "";
+  return ""; //return nothing if nothing is found
 }
 function checkCookie() {
   var user=getCookie("usnameYMCA");
 	//wlecome the user if there is a cookie
 	//the cookie will show that the user has been here ebfore
-  if (user != "") {
-   window.location.replace("test.html");
+  if (user != "") {//check there is a name
+   window.location.replace("test.html"); //open the test
   } 
 }
 	checkCookie() 

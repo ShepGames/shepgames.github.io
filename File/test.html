@@ -108,6 +108,7 @@ function setCookie(cname,cvalue,exdays) {
 }
 var comp=0;//decide on size of chart
 var points=getCookie("pointsYMCA");
+setCookie("pointsYMCA",points,365);
 var level=parseInt(getCookie("levelYMCA"));
 	level=level/2;
 if (level >=78 && level< 100){

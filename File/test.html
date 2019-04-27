@@ -107,24 +107,31 @@ function setCookie(cname,cvalue,exdays) {
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 var comp=0;//decide on size of chart
-var points=getCookie("pointsYMCA");
-setCookie("pointsYMCA",points,365);
+
 var level=parseInt(getCookie("levelYMCA"));
-	level=level/2;
+var points=getCookie("pointsYMCA");
+if (level>points) //only replace if level is higher
+{
+	setCookie("pointsYMCA",level,365);
+	points=getCookie("pointsYMCA");
+}
+
+level=level/2; //divide down to make it fit into the bar
+	
 if (level >=78 && level< 100){
 	level=94;
 	var dot =level*2;
 	setCookie("levelYMCA",dot,365);
-	}else if(level > 100){
+	}else if(level > 100){ //make 100%
 			 level=100;
 	}
 window.onload = move();
-function move() {
+function move() { //move the bar size to the percentage
   var elem = document.getElementById("myBar");   
   var width = 1;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width >= level) {
+    if (width >= level) { //fill in up to the level number
       clearInterval(id);
     } else {
       width++; 
@@ -133,9 +140,9 @@ function move() {
   }
 	//check level
 	 document.getElementById("con").innerHTML = points;
-	if(points <= 100){
-		document.getElementById("lev").innerHTML = "0";
-		document.getElementById("emoji").className = "em em-bread";
+	if(points <= 100){ //make emoji relative to level
+		document.getElementById("lev").innerHTML = "0"; //show level number
+		document.getElementById("emoji").className = "em em-bread"; //emoji code
 		comp=(points/500)*20;
 	   }else if(points <= 200){
 			document.getElementById("lev").innerHTML = "1";
@@ -155,7 +162,7 @@ function move() {
 			comp=(points/500)*100;
 		}
 	if(comp >= 100){
-		comp=100;	
+		comp=100;	//prevent comp number getting too large
 	}
 	
 }

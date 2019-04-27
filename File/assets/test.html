@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+  border: 1px; 
+  border-radius: 5px; 
+  font-size: 0.6em; 
+  height: 3.8em;
+  line-height: 1.5em;
+  text-indent: 0.5em;
+  height:30px;
+  width:99%;
+  bleft: 0;
+  right: 0;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #af005a;
+  border: 1px; 
+  border-radius: 5px; 
+  font-size: 0.6em; 
+		height: 3.8em;
+		line-height: 1.5em;
+		text-indent: 0.5em;
+		height:30px;
+		
+		
+		left: 0;
+  		right: 0;
+		
+}
+</style>
+<head>
+<meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+	</head>
+<body>
+
+<div class="header">
+	<table style="width:100%">
+
+	<th><img src="Logo.jpg" alt="YMCA logo" width=290px height=80px></th>
+	  </tr>
+	</table>
+	
+</div>
+	<br>
+	<div class="contentbox">
+		<h3>Your current progress</h3>
+		<div id="myProgress">
+  <div id="myBar"></div>
+			<br>
+</div>
+		</div>
+		<br><br>
+	
+	<div class="contentbox">
+		<h3>Your points</h3>
+		<h4 style="color:#af005a"><i class="em em-moneybag"></i> <i id="con">0</i></h4>
+	</div>
+<br><br>
+	<div class="contentbox">
+		<h3>Your level</h3>
+		<h4 style="color:#af005a"><i id="emoji" class="em em-books"></i> <i id="lev">0</i></h4>
+	</div>
+<br><br><br><br>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function setCookie(cname,cvalue,exdays) {
+  //add the cookie data into the phone
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+var comp=0;//decide on size of chart
+
+var level=parseInt(getCookie("levelYMCA"));
+var points=getCookie("pointsYMCA");
+setCookie("pointsYMCA",level,365);
+points=getCookie("pointsYMCA");
+level=level/2;
+	
+if (level >=78 && level< 100){
+	level=94;
+	var dot =level*2;
+	setCookie("levelYMCA",dot,365);
+	}else if(level > 100){
+			 level=100;
+	}
+window.onload = move();
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= level) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+	//check level
+	 document.getElementById("con").innerHTML = points;
+	if(points <= 100){
+		document.getElementById("lev").innerHTML = "0";
+		document.getElementById("emoji").className = "em em-bread";
+		comp=(points/500)*20;
+	   }else if(points <= 200){
+			document.getElementById("lev").innerHTML = "1";
+		   document.getElementById("emoji").className = "em em-fish";
+		   comp=(points/500)*40;
+		}else if(points <= 300){
+			 document.getElementById("lev").innerHTML = "2";
+			document.getElementById("emoji").className = "em em-male-farmer";
+			comp=(points/500)*60;
+	   }else if(points <= 400){
+			document.getElementById("lev").innerHTML = "3";
+		   document.getElementById("emoji").className = "em em-church";
+		   comp=(points/500)*80;
+		}else{
+			document.getElementById("lev").innerHTML = "4";
+			document.getElementById("emoji").className = "em em-european_castle";
+			comp=(points/500)*100;
+		}
+	if(comp >= 100){
+		comp=100;	
+	}
+	
+}
+</script>
+		
+	
+</body>
+</html>

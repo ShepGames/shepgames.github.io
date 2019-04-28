@@ -235,3 +235,17 @@ body{
 	color:white;
 	background-color:black;
 }
+.other{
+	position:fixed;
+	z-index: 2;
+	
+	height:200%;
+	width:200%;
+}
+.animate{
+  
+}
+.back{
+	
+	display:none
+}

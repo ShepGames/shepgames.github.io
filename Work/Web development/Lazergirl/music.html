@@ -65,31 +65,22 @@ body {font-family: "Lato", sans-serif}
 	   <b><h2 id="title">It's hot</h2> </b>
 	  <br>
 	  <h4>English</h4>
-    <audio controls>
+    <audio id="audio" controls>
 		
-		  <source id="songE" src="wetransfer-eaad56/1. LazerGirl - It's hot.mp3" type="audio/mpeg">
+		  <source id="songE" src="wetransfer-eaad56/1. LazerGirl - It's hot.mp3" >
 		Your browser does not support the audio element.
 		</audio>
 	  <br>
 	  <h4>русский</h4>
-	  <audio controls>
+	  <audio id="audio1" controls>
 		  
-		  <source id="songR" src="wetransfer-eaad56/1. LazerGirl - Будет Жарко.mp3" type="audio/mpeg">
+		  <source id="songR" src="wetransfer-eaad56/1. LazerGirl - Будет Жарко.mp3" type="audio/mp3">
 		Your browser does not support the audio element.
 		</audio>
 	  <br>
 	  <button onClick="back()"><h6><--</h6></button> <button onClick="next()"><h6>--></h6></button>
   </div>
-	<ul style="list-style: none">
-  <li>Audio Files
-    <ul id="list">
-      <li><a href="#" data-value="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga">Death_Becomes_Fur.oga</a></li>
-      <li><a href="#" data-value="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4">Death_Becomes_Fur.mp4</a></li>
-      <li><a href="#" data-value="http://media.w3.org/2010/11/rrs006.oga">rrs006.oga</a></li>
-      <li><a href="#" data-value="http://media.w3.org/2010/05/sound/sound_90.mp3">sound_90.mp3</a></li>
-    </ul>
-  </li>
-</ul>
+	
 	<script>
 		//define each file and name
 
@@ -106,13 +97,14 @@ body {font-family: "Lato", sans-serif}
 				count=0;
 				//full loop
 			}
-			console.log("wetransfer-eaad56/"+songListE[count]);
+			
 				document.getElementById("songE").src = "wetransfer-eaad56/"+songListE[count];
 			console.log(document.getElementById("songE").src);
 			document.getElementById("songR").src = "wetransfer-eaad56/"+songListR[count];
 			document.getElementById("title").innerHTML= titleList[count];
-			document.getElementById('songE').load();
-			document.getElementById('songR').load();
+			
+			document.getElementById('audio').load();
+			document.getElementById('audio1').load();
 		}
 		function back() //return to song
 		{

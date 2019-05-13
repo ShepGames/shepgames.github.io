@@ -44,6 +44,7 @@ function entered(){
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie); //decode cookie
+	document.getElementById("cookies").innerHTML = "Name: "+decodedCookie;
   var ca = decodedCookie.split(';'); //decode the string
   for(var i = 0; i < ca.length; i++) {
     var c = ca[i];
@@ -54,11 +55,12 @@ function getCookie(cname) {
       return c.substring(name.length, c.length); //return the real cookie
     }
   }
+	
   return ""; //return nothing if nothing is found
 }
 function checkCookie() {
   var user=getCookie("usnameYMCA");
-	document.getElementById("cookies").innerHTML = "Name: "+user;
+	
 	//wlecome the user if there is a cookie
 	//the cookie will show that the user has been here ebfore
   if (user != "") {//check there is a name

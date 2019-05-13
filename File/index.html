@@ -58,6 +58,7 @@ function getCookie(cname) {
 }
 function checkCookie() {
   var user=getCookie("usnameYMCA");
+	document.getElementById("cookies").innerHTML = "Name: "+user;
 	//wlecome the user if there is a cookie
 	//the cookie will show that the user has been here ebfore
   if (user != "") {//check there is a name
@@ -105,6 +106,7 @@ function checkCookie() {
 		<p>If you do indeed lose your data, you can get it back with the help of an 
 			adult instructor. 
 		</p>
+		<p id="cookies"></p>
 	</div>
 	
 </body>

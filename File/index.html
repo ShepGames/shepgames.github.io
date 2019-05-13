@@ -44,7 +44,7 @@ function entered(){
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie); //decode cookie
-	document.getElementById("cookies").innerHTML = "Name: "+decodedCookie;
+	document.getElementById("cookies").innerHTML = "Name: "+document.cookie;
   var ca = decodedCookie.split(';'); //decode the string
   for(var i = 0; i < ca.length; i++) {
     var c = ca[i];

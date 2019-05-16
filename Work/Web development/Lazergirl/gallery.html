@@ -71,7 +71,43 @@ function googleTranslateElementInit() {
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="welcome">
     <img src="lazergirl.png" style="width:60%">
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-  <div id="slideA">
+  <img id="songE" src="assets/1.jpg" alt="gallery" style="width:100%">
+		<p id="title"></p>
+		<h3><button onClick="back()" class="previous round">&#8249;</button> <button onClick="next()"class="previous round">&#8250;</button></h3>
+  <script>
+		//define each file and name
+
+		
+		var titleList=[""];
+		var count=1;
+		function next() //next song
+		{
+			//console.log("next");
+			
+			count=count+1;
+			if (count > 22){
+				count=1;
+				//full loop
+			}
+			
+				document.getElementById("songE").src = "assets/"+count+".jpg";
+			console.log(document.getElementById("songE").src);
+			//document.getElementById("title").innerHTML= titleList[count];
+			
+		}
+		function back() //return to song
+		{
+			count=count-1;
+			if (count < 1){
+				count=22;
+				//full loop
+			}
+				document.getElementById("songE").src = "assets/"+count+".jpg";
+			//document.getElementById("title").innerHTML = titleList[count];
+		}
+	</script>
+		
+		<div id="slideA">
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     <div class="w3-quarter btn" >

@@ -73,7 +73,7 @@ function googleTranslateElementInit() {
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
   <p id="title">Beautiful girls can be smart too. Bachelor of Hons graduate.</p>
 		<img id="songE" src="content/1.jpg" alt="gallery" style="width:auto;height:370px;">
-		<p id="photo">Photography by C Barrey</p>
+		<p id="photo"></p>
 		<h3><button onClick="back()" class="previous round">&#8249;</button> <button onClick="next()"class="previous round">&#8250;</button></h3>
   <script>
 		//define each file and name
@@ -90,7 +90,7 @@ function googleTranslateElementInit() {
 				count=1;
 				//full loop
 			}
-			if (count ==3 || count ==4 ||count==7){
+			if (count<13||count>14){
 				document.getElementById("photo").innerHTML= " ";
 			}else{
 				document.getElementById("photo").innerHTML= "Photography by C Barrey";
@@ -107,7 +107,7 @@ function googleTranslateElementInit() {
 				count=22;
 				//full loop
 			}
-			if (count ==3 || count ==4 ||count==7){
+			if (count<13||count>14){
 				document.getElementById("photo").innerHTML= " ";
 			}else{
 				document.getElementById("photo").innerHTML= "Photography by C Barrey";

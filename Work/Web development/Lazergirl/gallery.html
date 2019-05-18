@@ -71,14 +71,15 @@ function googleTranslateElementInit() {
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="welcome">
     <img src="lazergirl.png" style="width:60%">
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-  <img id="songE" src="assets/1.jpg" alt="gallery" style="width:100%">
-		<p id="title"></p>
+  <p id="title">Beautiful girls can be smart too. Bachelor of Hons graduate.</p>
+		<img id="songE" src="content/1.jpg" alt="gallery" style="width:auto;height:370px;">
+		
 		<h3><button onClick="back()" class="previous round">&#8249;</button> <button onClick="next()"class="previous round">&#8250;</button></h3>
   <script>
 		//define each file and name
 
 		
-		var titleList=[""];
+		var titleList=["Beautiful girls can be smart too. Bachelor of Hons graduate. ","Performing for the local charity MacMillan Support","With my amazing manager Steve Barrey.","I rise from the ash with my red like fire hair and I eat all men like air..","Steve B loves our new banner, do you?","Always recording in style. Who said spikes can’t be lady’s best friends? ;)","Amazing work by Jules Miller from Brighton, huge thank you!","Sometimes it gets a bit too hot in the studio when I’m around..","I love this amazing fan art work!! I have some amazing very talented supporters out there!! ","Beautiful, mysterious, wild and free..","Sexy times in the studio. It’s getting hot in here.... ","My favourite person Julian! This guy is a legend, the work he has done for me, true talent! "," ","I had pleasure of meeting this legend!! Steve Mac, such an incredible talent!","Sexy me with my sexy manager Steve B.. supporting ChestnutTree House.","ChestnutTree House Support. ","Always make it little sexy ;)","There’s always time to be a little silly and let your inner child out.. ","In the studio with Steve Mac working on our amazing song Dead At First Sight, inspired by Peter James’s novel. The studio was steaming hot as to what we have created!!","Sponsoring London Marathon. ","Gala night in support of Chestnut TreeHouse. ","Long hours in the studio finishing the EP.. "];
 		var count=1;
 		function next() //next song
 		{
@@ -90,9 +91,9 @@ function googleTranslateElementInit() {
 				//full loop
 			}
 			
-				document.getElementById("songE").src = "assets/"+count+".jpg";
+				document.getElementById("songE").src = "content/"+count+".jpg";
 			console.log(document.getElementById("songE").src);
-			//document.getElementById("title").innerHTML= titleList[count];
+			document.getElementById("title").innerHTML= titleList[count-1];
 			
 		}
 		function back() //return to song
@@ -102,8 +103,10 @@ function googleTranslateElementInit() {
 				count=22;
 				//full loop
 			}
-				document.getElementById("songE").src = "assets/"+count+".jpg";
-			//document.getElementById("title").innerHTML = titleList[count];
+				document.getElementById("songE").src = "content/"+count+".jpg";
+			var temp=count-1;
+			
+			document.getElementById("title").innerHTML = titleList[temp];
 		}
 	</script>
 		

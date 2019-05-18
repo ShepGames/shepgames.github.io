@@ -73,7 +73,7 @@ function googleTranslateElementInit() {
     <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
   <p id="title">Beautiful girls can be smart too. Bachelor of Hons graduate.</p>
 		<img id="songE" src="content/1.jpg" alt="gallery" style="width:auto;height:370px;">
-		
+		<p id="photo">Photography by C Barrey</p>
 		<h3><button onClick="back()" class="previous round">&#8249;</button> <button onClick="next()"class="previous round">&#8250;</button></h3>
   <script>
 		//define each file and name
@@ -90,7 +90,11 @@ function googleTranslateElementInit() {
 				count=1;
 				//full loop
 			}
-			
+			if (count ==3 || count ==4 ||count==7){
+				document.getElementById("photo").innerHTML= " ";
+			}else{
+				document.getElementById("photo").innerHTML= "Photography by C Barrey";
+			}
 				document.getElementById("songE").src = "content/"+count+".jpg";
 			console.log(document.getElementById("songE").src);
 			document.getElementById("title").innerHTML= titleList[count-1];
@@ -102,6 +106,11 @@ function googleTranslateElementInit() {
 			if (count < 1){
 				count=22;
 				//full loop
+			}
+			if (count ==3 || count ==4 ||count==7){
+				document.getElementById("photo").innerHTML= " ";
+			}else{
+				document.getElementById("photo").innerHTML= "Photography by C Barrey";
 			}
 				document.getElementById("songE").src = "content/"+count+".jpg";
 			var temp=count-1;
@@ -135,7 +144,7 @@ function googleTranslateElementInit() {
  <a href="https://open.spotify.com/artist/3fFCKDdCiNFqz14Vo5ftt4?play=true&utm_source=open.spotify.com&utm_medium=open"><i class="fa fa-spotify w3-hover-opacity"></i></a>
  <br><br>
 	 <h6 style="text-align:left;">Managed by Constellation Management</h6>
-	<h6 style="text-align:left;">Photography by C Barrey</h6>
+	<h6 style="text-align:left;"> </h6>
 </footer>
 
 <script>

@@ -82,12 +82,15 @@ function googleTranslateElementInit() {
 		Your browser does not support the audio element.
 		</audio>
 	  <br>
+	  <div id="russia">
 	  <h4>русский</h4>
+	  
 	  <audio id="audio1" controls>
 		  
 		  <source id="songR" src="wetransfer-eaad56/1. LazerGirl - Будет Жарко.mp3" type="audio/mp3">
 		Your browser does not support the audio element.
 		</audio>
+	  </div>
 	  <br>
 	  <h3><button onClick="back()" class="previous round">&#8249;</button> <button onClick="next()"class="previous round">&#8250;</button></h3>
   </div>
@@ -113,7 +116,12 @@ function googleTranslateElementInit() {
 			console.log(document.getElementById("songE").src);
 			document.getElementById("songR").src = "wetransfer-eaad56/"+songListR[count];
 			document.getElementById("title").innerHTML= titleList[count];
-			
+			if(songListR[count]=="#"){
+				console.log("rrr");
+				document.getElementById("russia").style.visibility = "hidden";
+			}else{
+				document.getElementById("russia").style.visibility = "visible";
+			}
 			document.getElementById('audio').load();
 			document.getElementById('audio1').load();
 		}
@@ -127,6 +135,12 @@ function googleTranslateElementInit() {
 				document.getElementById("songE").src = "wetransfer-eaad56/"+songListE[count];
 			document.getElementById("songR").src = "wetransfer-eaad56/"+songListR[count];
 			document.getElementById("title").innerHTML = titleList[count];
+			if(songListR[count]=="#"){
+				console.log("rrr");
+				document.getElementById("russia").style.visibility = "hidden";
+			}else{
+				document.getElementById("russia").style.visibility = "visible";
+			}
 			document.getElementById('audio').load();
 			document.getElementById('audio1').load();
 		}

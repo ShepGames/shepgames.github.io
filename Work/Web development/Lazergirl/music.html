@@ -98,16 +98,16 @@ function googleTranslateElementInit() {
 	<script>
 		//define each file and name
 
-		var songListE=["1. LazerGirl - It's hot.mp3","2. LazerGirl - Tocarme.m4a","#","4. LazerGirl - Object.m4a","LazerGirl - Dead At First Sight (Steve Mac).wav","LazerGirl - Picasso.wav"];
-		var songListR=["1. LazerGirl - Будет Жарко.mp3","2. LazerGirl - Прикоснись.m4a","3. LazerGirl - Пикассо.wav","#","#","#"];
-		var titleList=["It's hot","Tocarme","Picasso","Object","Dead At First Sight","Picasso"];
+		var songListE=["1. LazerGirl - It's hot.mp3","2. LazerGirl - Tocarme.m4a","LazerGirl - Picasso.wav","4. LazerGirl - Object.m4a","LazerGirl - Dead At First Sight (Steve Mac).wav","Ultra Violet V2 Full Mix 2A.wav"];
+		var songListR=["1. LazerGirl - Будет Жарко.mp3","2. LazerGirl - Прикоснись.m4a","3. LazerGirl - Пикассо.wav","#","#","Ultra Violet V2 Full Mix 2A.wav"];
+		var titleList=["It's hot","Tocarme","Picasso","Object","Dead At First Sight","Ultra Violet"];
 		var count=0;
 		function next() //next song
 		{
 			//console.log("next");
 			
 			count=count+1;
-			if (count > 4){
+			if (count > 5){
 				count=0;
 				//full loop
 			}
@@ -129,7 +129,7 @@ function googleTranslateElementInit() {
 		{
 			count=count-1;
 			if (count < 0){
-				count=4;
+				count=5;
 				//full loop
 			}
 				document.getElementById("songE").src = "wetransfer-eaad56/"+songListE[count];
